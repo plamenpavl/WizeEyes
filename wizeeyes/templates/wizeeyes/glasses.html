@@ -1,0 +1,16 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Wizeeyes' Glasses</title>
+    </head>
+    <body>
+        <h1>Glasses</h1>
+        <ul>
+            {% for spx in glasses %}
+            <li><a href='{{spx.id}}'>{{spx.title}}</a></li>
+            {% endfor %}
+        </ul>
+        <a href="/glasses/add">Add a spx</a>
+    </body>
+</html>

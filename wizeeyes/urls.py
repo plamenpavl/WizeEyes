@@ -13,9 +13,18 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+
+"""TODO:learn to not use hardcoded urls"""
+
 from django.contrib import admin
 from django.urls import path
+from wizeeyes import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('glasses/', views.glasses),
+    path('', views.home),    
+    path('glasses/<int:id>', views.glasses_detail),
+    path('glasses/add', views.add),
+    path('glasses/delete/<int:id>', views.delete)
 ]
